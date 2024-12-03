@@ -6,8 +6,7 @@ file.close()
 
 
 result = 0
-operations = []
-operations.extend(re.findall(r'mul\(\d+\,\d+\)', file_content))
+operations = re.findall(r'mul\(\d+\,\d+\)', file_content)
 
 for operation in operations:
     l,r = [int(x) for x in re.findall(r'\d+', operation)]
